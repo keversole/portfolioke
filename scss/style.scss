@@ -1,0 +1,51 @@
+
+
+@import 'normalize';
+@import 'layout-cssgrid';
+@import 'typography';
+@import 'navigation';
+
+section {
+	background: #fff;
+}
+
+.photo {
+	display: none;
+	background: url('../assets/img/display-kalee.jpg');
+	background-size: cover;
+}
+
+
+.about,
+.work,
+.listing,
+.contact,
+.contact-lrg {
+	display: inherit; /* inherits the styles of the grid */
+}
+
+.contact-lrg {
+	display: none;
+}
+
+@media (min-width: 40em) {
+  .container {
+  	background: pink;
+  }
+
+  	.photo,
+  	.contact-lrg {
+  		display: inherit;
+  	}
+
+  .about,
+  .listing,
+  .contact-lrg {
+  	grid-template-columns: 1fr 1fr;
+  	grid-gap: 0;
+  }
+
+  .contact-sm {
+  	display: none;
+  }
+}
