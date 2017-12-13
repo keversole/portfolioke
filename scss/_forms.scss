@@ -1,0 +1,38 @@
+form {
+padding: 5em;
+	label {
+	
+}
+}
+input[type=text],
+textarea, {
+	width: 100%;
+	margin: 5px 0 20px 0;
+	font-size: 1em;
+	font-family: "courier-prime";
+	font-style: normal;
+	font-weight: 400;
+	color: #333;
+	line-height: 1.25em;
+	border: 0;
+	border-bottom: 1px solid tomato;
+	box-sizing: border-box;
+	// padding: 1em;
+	// resize: vertical;
+}
+
+textarea {
+	min-height: 5em;
+}
+
+input[type=submit] {
+	font-family: "courier-prime";
+	font-size: 1.25em;
+	text-transform: uppercase;
+    background-color: tomato;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.25em;
+}

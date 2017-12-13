@@ -2,3 +2,95 @@
 	display: grid;
   grid-gap: 2em;
 }
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+section {
+	background: #fff;
+}
+
+.photo {
+	display: none;
+	background: url('../assets/img/display-kalee.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.about,
+.work,
+.listing,
+.contact,
+.contact-lrg {
+	display: inherit; /* inherits the styles of the grid */
+}
+
+.contact-lrg {
+	display: none;
+}
+
+// .cook {
+// 	background: url('../assets/img/thumb-cookmedical.png') top center no-repeat rgba(0, 0, 0, .5);
+// 	background-size: cover;
+// 	}
+
+// 	.appstrap {
+// 		background: url('../assets/img/thumb-appstrap.png') top center no-repeat;
+// 		background-size: cover;
+// 	}
+
+  .contact-sm {
+  	font-size: 1.5em;
+  	padding: 0 1%;
+
+  	li {
+  		margin-bottom: .5em;
+  	}
+  }
+
+@media (min-width: 40em) {
+
+ .work .listing {
+ 		min-height: 500px;
+
+ 		a {
+ 			color: #fff;
+ 		}
+ }
+
+.about {
+	min-height: 800px;
+
+	.intro {
+
+	display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+  	max-width: 50%;
+
+  	h1, p {
+  		text-align: left;
+  		}
+  	}
+	}
+}
+
+
+  	.photo,
+  	.contact-lrg {
+  		display: inherit;
+  	}
+
+  .about,
+  .listing,
+  .contact-lrg {
+  	grid-template-columns: 1fr 1fr;
+  	grid-gap: 0;
+  }
+
+  .contact-sm {
+  	display: none;
+  }
+}

@@ -1,9 +1,44 @@
 nav {
-	position: fixed; /* do something different */
-	text-transform: uppercase;
-
+	position: absolute;
+	margin-top: 2em;
+	margin-left: 48%;
+	text-align: right;
+	font-family: 'Source Serif Pro', serif;
+	// background: #fff;
+	padding-top: 1em;
+	padding-right: 1em;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	
 	a {
-		text-decoration: none;
+	display: block;
+	background: white;
+	padding-top: .5em;
+	padding-right: .5em;
+	font-size: 1.5em;
+	padding-bottom: .5em;
+	margin-bottom: 1em;
+
+
+	&.item-1 {
+		transform: rotate(-5deg);
+	}
+
+	&.item-2 {
+		transform: rotate(2deg);
+	}
+
+	&.item-3 {
+		transform: rotate(-3deg);
+	}
+
+
+	&:hover {
+
+		color: red;
+
+		transition: .25s linear;
+
+		}
 	}
 }
-

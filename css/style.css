@@ -389,62 +389,302 @@ template {
 [hidden] {
   display: none; }
 
-.container {
-  display: grid;
-  grid-gap: 2em; }
+header {
+  position: relative; }
+
+body {
+  -webkit-font-smoothing: antialiased; }
+
+main,
+.secondary {
+  display: flex;
+  min-height: 500px; }
+
+.secondary {
+  margin: 120px; }
+
+.about,
+.photo,
+.work,
+.contact {
+  width: 50%; }
+
+.photo {
+  background: url("../assets/img/display-kalee2.png") center center no-repeat;
+  background-size: cover; }
+
+.intro {
+  max-width: 50%;
+  margin: 0 auto; }
+
+.portfolio li {
+  font-size: 1.5em;
+  margin-bottom: 1em; }
+
+form {
+  padding: 5em; }
+
+input[type=text],
+textarea {
+  width: 100%;
+  margin: 5px 0 20px 0;
+  font-size: 1em;
+  font-family: "courier-prime";
+  font-style: normal;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.25em;
+  border: 0;
+  border-bottom: 1px solid tomato;
+  box-sizing: border-box; }
+
+textarea {
+  min-height: 5em; }
+
+input[type=submit] {
+  font-family: "courier-prime";
+  font-size: 1.25em;
+  text-transform: uppercase;
+  background-color: tomato;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.25em; }
+
+.reveal-text,
+.reveal-text::after {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 800ms;
+  animation-duration: 800ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+
+.reveal-text {
+  position: relative;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-animation-name: reveal-text;
+  animation-name: reveal-text;
+  color: #black;
+  cursor: default; }
+
+.reveal-text::after {
+  content: "";
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2f98b;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  pointer-events: none;
+  -webkit-animation-name: revealer-text;
+  animation-name: revealer-text; }
+
+@-webkit-keyframes reveal-text {
+  from {
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0); }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0); } }
+
+@keyframes reveal-text {
+  from {
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0); }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0); } }
+
+@-webkit-keyframes revealer-text {
+  0%, 50% {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%; }
+  60%, 100% {
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%; }
+  60% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0); } }
+
+@keyframes revealer-text {
+  0%, 50% {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%; }
+  60%, 100% {
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%; }
+  60% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0); } }
+
+.reveal-text-p,
+.reveal-text-p::after {
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 800ms;
+  animation-duration: 800ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+
+.reveal-text-p {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-animation-name: reveal-text;
+  animation-name: reveal-text;
+  cursor: default; }
+
+.reveal-text-p::after {
+  content: "";
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  pointer-events: none;
+  -webkit-animation-name: revealer-text;
+  animation-name: revealer-text; }
+
+@-webkit-keyframes reveal-text-p {
+  from {
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0); }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0); } }
+
+@keyframes reveal-text-p {
+  from {
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0); }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0); } }
+
+@-webkit-keyframes reveal-text-p {
+  0%, 50% {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%; }
+  60%, 100% {
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%; }
+  60% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0); } }
+
+@keyframes revealer-text-p {
+  0%, 50% {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%; }
+  60%, 100% {
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%; }
+  60% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0); } }
+
+a {
+  text-decoration: none;
+  color: tomato; }
+
+h1,
+h2,
+h3,
+p,
+ul {
+  text-align: center; }
+
+h2 {
+  font-size: 2em; }
 
 h1,
 h2,
 h3 {
-  font-family: 'Zilla Slab', serif; }
-
-h2 {
-  text-align: center; }
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 400; }
 
 p,
-ul,
-nav {
-  font-family: 'Open Sans', sans-serif; }
+ul {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300; }
 
 ul {
   list-style: none; }
 
+@media (min-width: 60em) {
+  h1 {
+    font-size: 3em; }
+  p {
+    font-size: 1.5em; } }
+
+@media (min-width: 80em) {
+  h1 {
+    font-size: 5em; }
+  p {
+    font-size: 2em; } }
+
 nav {
-  position: fixed;
-  /* do something different */
-  text-transform: uppercase; }
+  position: absolute;
+  margin-top: 2em;
+  margin-left: 48%;
+  text-align: right;
+  font-family: 'Source Serif Pro', serif;
+  padding-top: 1em;
+  padding-right: 1em;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; }
   nav a {
-    text-decoration: none; }
-
-section {
-  background: #fff; }
-
-.photo {
-  display: none;
-  background: url("../assets/img/display-kalee.jpg");
-  background-size: cover; }
-
-.about,
-.work,
-.listing,
-.contact,
-.contact-lrg {
-  display: inherit;
-  /* inherits the styles of the grid */ }
-
-.contact-lrg {
-  display: none; }
-
-@media (min-width: 40em) {
-  .container {
-    background: pink; }
-  .photo,
-  .contact-lrg {
-    display: inherit; }
-  .about,
-  .listing,
-  .contact-lrg {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0; }
-  .contact-sm {
-    display: none; } }
+    display: block;
+    background: white;
+    padding-top: .5em;
+    padding-right: .5em;
+    font-size: 1.5em;
+    padding-bottom: .5em;
+    margin-bottom: 1em; }
+    nav a.item-1 {
+      transform: rotate(-5deg); }
+    nav a.item-2 {
+      transform: rotate(2deg); }
+    nav a.item-3 {
+      transform: rotate(-3deg); }
+    nav a:hover {
+      color: red;
+      transition: .25s linear; }

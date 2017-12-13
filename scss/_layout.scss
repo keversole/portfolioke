@@ -1,0 +1,36 @@
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+main,
+.secondary {
+	display: flex;
+	min-height: 500px;
+}
+
+
+.secondary {
+	margin: 120px;
+}
+
+.about,
+.photo,
+.work,
+.contact {
+	width: 50%;
+}
+
+.photo {
+	background: url('../assets/img/display-kalee2.png') center center no-repeat;
+	background-size: cover;
+}
+
+.intro {
+	max-width: 50%;
+	margin: 0 auto;
+}
+
+.portfolio li {
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
