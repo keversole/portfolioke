@@ -1,0 +1,23 @@
+
+.grid-contain {
+	width: 90%;
+	margin: 0 auto;
+	background: black;
+}
+
+.grid {
+	background: tomato;
+	display: grid;
+	color: white;
+	// grid-gap: 1rem;
+
+	grid-template-columns: 10% 20% 70%;
+	grid-template-rows: 100%;
+
+	.item {
+		background: #333;
+
+	
+	}
+}
+

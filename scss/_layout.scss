@@ -23,6 +23,11 @@ main,
 .photo {
 	background: url('../assets/img/display-kalee2.png') center center no-repeat;
 	background-size: cover;
+
+	&.ind {
+		background: url('../assets/img/placeholder-in.jpg') center center no-repeat;
+		background-size: cover;
+	}
 }
 
 .intro {
@@ -34,3 +39,4 @@ main,
 	font-size: 1.5em;
 	margin-bottom: 1em;
 }
+
