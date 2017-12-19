@@ -2,7 +2,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-main,
+
 .secondary {
 	display: flex;
 	min-height: 500px;
@@ -18,6 +18,10 @@ main,
 .work,
 .contact {
 	width: 50%;
+}
+
+.content {
+	background: #fb7b7b12;
 }
 
 .photo {
@@ -40,3 +44,22 @@ main,
 	margin-bottom: 1em;
 }
 
+.logo  {
+	position: relative;
+	top: 1rem;
+	left: 2rem;
+	a {
+		border: none;
+	}
+
+	
+	svg {
+		// background: #d8c311;
+		box-shadow: -10px -10px 70px #eee;
+		border: 2px dotted #ddd;
+		border-radius: 50%;
+		width: 4rem;
+		height: 4rem;
+		fill: black;
+	}
+}

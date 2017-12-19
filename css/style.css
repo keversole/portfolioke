@@ -395,7 +395,6 @@ header {
 body {
   -webkit-font-smoothing: antialiased; }
 
-main,
 .secondary {
   display: flex;
   min-height: 500px; }
@@ -408,6 +407,9 @@ main,
 .work,
 .contact {
   width: 50%; }
+
+.content {
+  background: #fb7b7b12; }
 
 .photo {
   background: url("../assets/img/display-kalee2.png") center center no-repeat;
@@ -423,6 +425,20 @@ main,
 .portfolio li {
   font-size: 1.5em;
   margin-bottom: 1em; }
+
+.logo {
+  position: relative;
+  top: 1rem;
+  left: 2rem; }
+  .logo a {
+    border: none; }
+  .logo svg {
+    box-shadow: -10px -10px 70px #eee;
+    border: 2px dotted #ddd;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    fill: black; }
 
 form {
   padding: 5em; }
@@ -662,6 +678,10 @@ ul {
 @media (min-width: 80em) {
   h1 {
     font-size: 5em; }
+  h2 {
+    font-size: 3rem; }
+  h3 {
+    font-size: 1.5rem; }
   p {
     font-size: 2em; } }
 
@@ -701,8 +721,22 @@ nav {
 .grid {
   background: tomato;
   display: grid;
-  color: white;
-  grid-template-columns: 10% 20% 70%;
-  grid-template-rows: 100%; }
-  .grid .item {
-    background: #333; }
+  min-height: 100vh;
+  min-width: 100%;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 1fr 90px;
+  grid-template-areas: "sidebar  content" "footer   footer";
+  color: white; }
+  .grid main,
+  .grid aside,
+  .grid footer {
+    border: 1px solid black; }
+
+main {
+  grid-area: content; }
+
+aside {
+  grid-area: sidebar; }
+
+footer {
+  grid-area: footer; }

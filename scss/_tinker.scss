@@ -8,16 +8,32 @@
 .grid {
 	background: tomato;
 	display: grid;
+	   min-height: 100vh;
+      min-width: 100%;
+	grid-template-columns: 40px 1fr;
+	grid-template-rows: 1fr 90px;
+	grid-template-areas: "sidebar  content"
+                           "footer   footer";
 	color: white;
-	// grid-gap: 1rem;
 
-	grid-template-columns: 10% 20% 70%;
-	grid-template-rows: 100%;
 
-	.item {
-		background: #333;
 
-	
+	main,
+	aside,
+	footer {
+		border: 1px solid black;
 	}
+}
+
+main {
+	grid-area: content;
+}
+
+aside {
+	grid-area: sidebar;
+}
+
+footer {
+	grid-area: footer;
 }
 
